@@ -3,10 +3,10 @@
 
 
 def floor(n: float) -> int:
-  """This function takes a float and returns it floor
-  Args:
-    n: float
-  Return:
-    int(n // 1)
-  """
-  return int(n // 1)
+     """This function takes a float and returns it floor
+    Args:
+        n: float
+    Return:
+        int(n // 1)
+    """
+    return int(n // 1)
