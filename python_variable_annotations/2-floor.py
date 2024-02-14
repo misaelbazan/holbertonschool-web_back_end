@@ -3,7 +3,7 @@
 
 
 def floor(n: float) -> int:
-     """This function takes a float and returns it floor
+    """This function takes a float and returns it floor
     Args:
         n: float
     Return:
