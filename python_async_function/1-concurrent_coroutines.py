@@ -17,6 +17,6 @@ async def wait_n(n: int, max_delay: int) -> List[float]:
         sort() because of concurrency
     """
     tasks = [asyncio.create_task(wait_random(max_delay))
-    for _ in range(n)]
+        for _ in range(n)]
     completed_ts = await asyncio.gather(*tasks)
     return sorted(completed_ts)
