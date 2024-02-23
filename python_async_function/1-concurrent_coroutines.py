@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
 """This module contains an async coroutine"""
 
+from typing import List
 import asyncio
 wait_random = __import__("0-basic_async_syntax").wait_random
 
 
-async def wait_n(n: int, max_delay: int) -> list:
+async def wait_n(n: int, max_delay: int) -> List[float]:
     """Async coroutine that takes in 2 int args, and will
     spawn wait_random x n times with the specified "max_delay"
     Args:
