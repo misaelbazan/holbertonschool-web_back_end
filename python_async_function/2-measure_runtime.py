@@ -8,8 +8,16 @@ import asyncio
 
 
 def measure_time(n: int, max_delay: int) -> float:
+    """Function with ints <n> and <max_delay> as args that measures the total
+    wxecution time for wait_n(n, max_delay)
+    Args:
+        n: int -> times that a random delay must be spawned
+        max_delay: int -> maximum delay time
+    Return:
+        Returns the total_time / n
+    """
     start_time = time.perf_counter()
     asyncio.run(wait_n(n, max_delay))
     end_time = time.perf_counter()
-    elapsed_time = end_time - start_time
-    return elapsed_time / n
+    total_time = end_time - start_time
+    return total_time / n
