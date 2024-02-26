@@ -11,9 +11,8 @@ def task_wait_random(max_delay: int) -> asyncio.Task:
     Args:
         max_delay: int - max delay to be passed to the wait_random function
     Return:
-        task - the task create when wait_random() was called with 
+        task - the task create when wait_random() was called with
             create_class()
     """
     task = asyncio.create_task(wait_random(max_delay))
     return task
-    
