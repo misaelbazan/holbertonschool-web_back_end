@@ -3,4 +3,5 @@
 // db name will be passed as option of mongo command
 // use db.<collection>.updateMany({ <key>: <value> },
 	{$set:{ <key>: <value> }})
-db.school.updateMany({ name: "Holberton school" }, {$set: { address: "972 Mission street"}})
+db.school.updateMany({ name: "Holberton school" },
+{$set: { address: "972 Mission street"}})
