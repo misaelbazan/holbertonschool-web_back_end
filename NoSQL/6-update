@@ -1,6 +1,8 @@
 // Update all documents with 'name="Holberton school"'
 // Update should add the attribute 'address="972 Mission street"'
 // db name will be passed as option of mongo command
-// use db.<collection>.updateMany({ <key>: <value> },
-//	{$set:{ <key>: <value> }})
-db.school.updateMany({ name: "Holberton school" }, {$set: { address: "972 Mission street"}})
+// use db.<collection>.updateMany
+db.school.updateMany(
+	{ name: "Holberton school" },
+	{ $set: { address: "972 Mission street" }}
+);
