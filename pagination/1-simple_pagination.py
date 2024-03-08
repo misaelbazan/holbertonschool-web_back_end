@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""
+"""This module must be commented
 """
 
 import csv
@@ -45,9 +45,9 @@ class Server:
         """Function to return the filtered content via pagination"""
         assert isinstance(page, int) and page > 0
         assert isinstance(page_size, int) and page_size > 0
-        indexes = index_range(page, page_size)
+        start, end = index_range(page, page_size)
         try:
             data = self.dataset()
-            return data[indexes[0]:indexes[1]]
+            return data[start, end]
         except IndexError:
             return []
