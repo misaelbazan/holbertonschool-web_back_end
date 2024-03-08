@@ -45,9 +45,9 @@ class Server:
         """Function to return the filtered content via pagination"""
         assert isinstance(page, int) and page > 0
         assert isinstance(page_size, int) and page_size > 0
-        s, e = index_range(page, page_size)
+        indexes = index_range(page, page_size)
         try:
             data = self.dataset()
-            return data[s:e]
+            return data[indexes[0]:indexes[1]]
         except IndexError:
             return []
