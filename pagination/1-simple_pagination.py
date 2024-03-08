@@ -27,6 +27,7 @@ class Server:
     DATA_FILE = "Popular_Baby_Names.csv"
 
     def __init__(self):
+        """Initialize an object"""
         self.__dataset = None
 
     def dataset(self) -> List[List]:
@@ -41,6 +42,7 @@ class Server:
         return self.__dataset
 
     def get_page(self, page: int = 1, page_size: int = 10) -> List[List]:
+        """Function to return the filtered content via pagination"""
         assert isinstance(page, int) and page > 0
         assert isinstance(page_size, int) and page_size > 0
         s, e = index_range(page, page_size)
