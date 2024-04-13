@@ -8,6 +8,6 @@ export default function handleProfileSignup(firstName, lastName, fileName) {
 
   Promise.allSettled(promises)
     .then((results) => {
-      results.forEach((result) => console.log(result));
+      results.forEach((result) => result);
     });
 }
