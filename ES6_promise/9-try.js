@@ -5,7 +5,7 @@ export default function guardrail(functionName) {
   try {
     queue.push(functionName());
   } catch (e) {
-    queue.push(e);
+    queue.push(`${e.name}: ${e.message}`);
   }
 
   queue.push(guardrailMsg);
