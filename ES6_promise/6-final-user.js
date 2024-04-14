@@ -7,4 +7,5 @@ export default function handleProfileSignup(firstName, lastName, fileName) {
   const promises = [promise1, promise2];
 
   return Promise.allSettled(promises)
+    .then((results) => console.log(results));
 }
