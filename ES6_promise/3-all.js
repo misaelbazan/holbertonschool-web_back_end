@@ -9,7 +9,7 @@ export default function handleProfileSignup() {
       const photoBody = values[0].body;
       const firstNameUser = values[1].firstName;
       const lastNameUser = values[1].lastName;
-      console.log(`${photoBody}, ${firstNameUser}, ${lastNameUser}`);
+      console.log(`${photoBody} ${firstNameUser} ${lastNameUser}`);
     })
     .catch(() => {
       console.log('Signup system offline');
