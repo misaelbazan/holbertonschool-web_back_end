@@ -3,7 +3,9 @@
 // Accepts two arguments
 // When a value starts with <<startString>> you only append the rest of the string
 export default function cleanSet(setToCheck, startString) {
-  if (!startString) return '';
+  if (!startString || typeof startString !== 'string') {
+    return '';
+  }
   const setToClean = setToCheck;
   const listResult = [];
   for (const elem of setToClean) {
